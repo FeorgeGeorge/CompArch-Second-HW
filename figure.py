@@ -56,7 +56,7 @@ for j in range(2):
 times = [np.array(times[0]), np.array(times[1])]
 
 [plt.plot([i for i in range(START, LIMIT, STEP)], times[j]) for j in range(2)]
-plt.legend(["oblivious", "naive"])
+plt.legend(["naive", "oblivious"])
 plt.savefig("Project/evm_{0}_{1}.png".format(configList[0], configList[1]))
 
 print("Graph drawn! \n Finish.")

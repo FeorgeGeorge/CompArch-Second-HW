@@ -4,7 +4,7 @@ from random import randint
 def transpose(I,O):
     for y in range(len(I)):
         for x in range(len(I[0])): 
-            O[x][y] = I[y][x]    
+            O[y][x] = I[x][y]    
 
 if __name__ == '__main__':
    

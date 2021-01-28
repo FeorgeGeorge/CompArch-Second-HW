@@ -2,8 +2,10 @@ import sys, timeit
 from random import randint
 
 def transposeFull(I, O, x, y, dx, dy):
-    if (dx == 1 and  dy == 1):
-        O[x][y] = I[y][x]
+    if (dx == dy  and dx <= 32):
+        for ny in range (y, y+dy):
+            for nx in range(x, x+dx):
+                O[nx][ny] = I[ny][nx]
     elif (dx >= dy):
         midx = dx // 2
         transposeFull(I, O, x, y, midx, dy)
